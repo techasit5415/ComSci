@@ -1,0 +1,21 @@
+def huffman_coding(text):
+    char_count = {}
+    for char in text:
+        char_count[char] = char_count.get(char, 0) + 1
+
+    sorted_char_count = sorted(char_count.items(), key=lambda x: x[1])
+
+    huffman_codes = {}
+    code = '0'
+    encoded_text = ''
+
+    for char, _ in sorted_char_count:
+        huffman_codes[char] = code
+        encoded_text += code
+        code = '1' + code
+
+    return encoded_text
+
+text = input("ข้อความ: ")
+encoded_text = huffman_coding(text)
+print("ข้อความที่เข้ารหัส:", encoded_text)

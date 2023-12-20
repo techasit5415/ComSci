@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Web for you</title>
+    <style>
+        body {
+            background-image: url(https://pbs.twimg.com/media/EM4e8E_U0AAzaUw?format=jpg&name=large);
+        }
+
+        .fade-in-video {
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+
+        .video-visible {
+            opacity: 1 !important;
+        }
+
+        #fadeInButton {
+            width: 150px;
+            height: 50px;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .overview-box {
+            background-color: white;
+            border: 2px solid black;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="background-clip: text; -webkit-background-clip: text; color: transparent; background-image: linear-gradient(to bottom, rgb(247, 0, 255), rgb(223, 93, 240));">เห็นเราอะเป่าไออ้วน</h1>
+    <img src="https://lh3.googleusercontent.com/pw/AIL4fc9DOmS1MN7x_GNmT5p0UcHWXEFTbVnj_bklvhABvMOFHYFvVV4UIw3uX1KMHSR7wLpT9YJs2gWXWFH8lr7GJFxNInQIlTEowxrEyNJItR0qPVI3WPqBI_BEP0lfRvT0vXDsWa5cACSD1tPzwnDEFIq3f45y_JPyKKmF3qgw0ViPMXTXHKQrZ4C27G1mW6fkezBzyWIta5FRWt_xd6zMWsZHex8Ahm56ACqynSvRzxx0wHKMr5PWiygRuztXLOIv2GR7-4S7DZ-9OChs-82cOXB6Fs9Ny2Q4JbjlTZwpNULlrXrgMxVhVSdtVRPynxXjCHPEdv9wXyK9asKs02QdbhD8RUmLUwH_-Cu9Cw_R80D-J4OoON47I3xl74EHkgZntqjpogztgFtoAm9YzwhQ3GCnf-3d2ebfSiApuZlkDyRXUsl8LoYPNYlUrOQ32swISgs2gJ6laaeO_QRd_ZgeTV9MsQArdDhcP5eGTAg2Re5qjYGvenoWvonZTO5c2LEbDOJvlt40h1uMr0G-HfbBM9GdPTY_IZRYoK6IA_NWIY8_iyR1jZ1MFiKqhkKEIVI3amI16whNOgBpXxO8MSNCOqv43JYsamSZQC9MalioPFYHLYwNq9plMylHRGkC82llSt-4Y1NuqJDawuPCyWaAhq6YAAjXU8sf8zHzyS0F0otTRtWvMxyWyd2s1Qm7395MJEezeYtjwTv8WWUGXdAKTs-mez6glT2SBpt0bpvcekT22jONTtyRkzgtrmJDO8rnl9oa8jkaf369dbLjuwa2ib0RCdpG-ISih0Mv0LoYsEnHBLRx5NlL5os8CrAGgC0URiRqJEQpkYGoqT8bmNmTEpuPXoQhxvTMOjWC65BSxjbMcABMfJpeyaDnSxTOBn7kwdjo758LA6WVKE0vCFzRKgAbWBA=w611-h918-s-no?authuser=0" width="10%">
+
+    <p id="overviewParagraph" class="hidden"></p>
+    <button id="fadeInButton">Click me</button>
+    <video id="myVideo" class="fade-in-video" width="900" height="600" controls autoplay muted>
+        <source src="C:\Users\techa\Downloads\SnapSave.io-ไม่อยากให้เธอไม่สบาย (You) - Three Man Down _Official MV_-(1080p).mp4" type="video/mp4">
+    </video>
+
+    <script>
+        var overviewParagraph = document.getElementById("overviewParagraph");
+
+        document.getElementById("fadeInButton").addEventListener("click", function () {
+            var video = document.getElementById("myVideo");
+            video.classList.add("video-visible");
+            this.classList.add("hidden");
+            overviewParagraph.classList.remove("hidden");
+
+            // Simulate typing animation
+            var text = "You are the smartest, best-looking person in the world, and there’s no way you’re not going to get an A on this test. Muah Muah! คุณคือคนที่ฉลาดและดูดีที่สุดในโลกใบนี้ ไม่มีทางที่คุณจะไม่ได้เกรดเอกับการสอบครั้งนี้ จุ๊บๆ";
+
+            var speed = 150; // Typing speed in milliseconds
+            var i = 0;
+
+            function type() {
+                if (i < text.length) {
+                    overviewParagraph.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+
+            type();
+        });
+    </script>
+</body>
+
+</html>

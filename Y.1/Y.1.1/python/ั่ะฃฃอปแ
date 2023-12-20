@@ -1,0 +1,68 @@
+import random
+import math
+
+
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+
+def mod_inverse(e, phi_n):
+    d = 0
+    x1, x2, y1, y2 = 1, 0, 0, 1
+    temp_phi_n = phi_n
+
+    while e > 0:
+        temp1 = temp_phi_n // e
+        temp2 = temp_phi_n - temp1 * e
+        temp_phi_n = e
+        e = temp2
+
+        x = x2 - temp1 * x1
+        y = y2 - temp1 * y1
+
+        x2 = x1
+        x1 = x
+        y2 = y1
+        y1 = y
+
+    if temp_phi_n == 1:
+        d = y2 + phi_n
+
+    return d
+
+
+p = random.randint(2, 100)
+q = random.randint(2, 100)
+while p == q:
+    q = random.randint(2, 100)
+
+# คำนวณ n และ phi(n)
+n = p * q
+phi_n = (p - 1) * (q - 1)
+
+# เลือก e (ให้ 1 < e < phi(n) และ gcd(phi(n), e) = 1)
+e = random.randint(2, phi_n - 1)
+while gcd(phi_n, e) != 1:
+    e = random.randint(2, phi_n - 1)
+
+# คำนวณค่า d
+d = mod_inverse(e, phi_n)
+
+# แสดง Public Key และ Private Key
+print("Public Key: {", e, ",", n, "}")
+print("Private Key: {", d, ",", n, "}")
+
+# ข้อความที่จะเข้ารหัส
+message = "66050160"
+
+# เข้ารหัสข้อความ
+encrypted_message = [(ord(char) ** e) % n for char in message]
+
+print("Encoded:", encrypted_message)
+
+
+decrypted_message = ''.join([chr((char ** d) % n) for char in encrypted_message])
+
+print("Decoded:", decrypted_message)
