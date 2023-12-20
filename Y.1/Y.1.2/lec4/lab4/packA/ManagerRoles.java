@@ -1,7 +1,6 @@
 package packA;
 
-public class ManagerRoles {
-    public static int evaluate(Object p){
-        return 0;
-    }
-}
+public interface ManagerRoles {
+public   int evaluate(Programmer p);
+  
+} 

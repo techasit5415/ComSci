@@ -1,11 +1,12 @@
 package packA;
 
-public class Employee {
+public abstract class Employee {
    protected String name;
    protected int experience;
    protected int salary;
-public  void abstract sayHi(){
+
+public abstract void sayHi();
     
-}
+
 }
 
