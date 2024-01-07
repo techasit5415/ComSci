@@ -1,19 +1,19 @@
 package packA;
-public class EmpTmp{
+public class Lab3EmpTmp{
     
         protected String name;
         protected int salary;
         protected int experience;
     
-    public EmpTmp(String n,int exp,int sal){
+    public Lab3EmpTmp(String n,int exp,int sal){
         name = n;
         salary = sal;
         experience =exp;
     }
-    public EmpTmp(String n){
-
+    public Lab3EmpTmp(String n){
+        this.name = n;
     }
-    public EmpTmp(){
+    public Lab3EmpTmp(){
 
     }
     public void setName(String name){
@@ -26,17 +26,17 @@ public class EmpTmp{
         this.salary = newSalary;
     }
     public int getSalary(){
-        return salary;
+        return this.salary;
     }
     public void setExperience(int exp){
         this.experience=exp;
     }
     public int getExperience(){
-        return experience;
+        return this.experience;
     }
     @Override
     public String toString() {
-        return "Acountant [experience=" + experience + ", specialty=]";
+        return String.format("EmpTmp [name=%s, salary=%d, experience=%d]", getName(), getSalary(), getExperience());
     }
     public void sayHi(){
        System.out.println(String.format("Hello from EmpTmp  [Hi my name is %s]",getName()));
