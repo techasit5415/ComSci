@@ -13,7 +13,7 @@ public class aa {
         sc.close();
 
         int gcd = calculator(first, second);
-        System.out.println("GCD(" + first + "," + second + ") = " + gcd);
+        System.out.println("GCD is " + gcd);
     }
 
     public static int calculator(int a, int b) {
