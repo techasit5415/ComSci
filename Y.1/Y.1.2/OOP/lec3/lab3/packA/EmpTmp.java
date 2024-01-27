@@ -1,19 +1,19 @@
 package packA;
-public class Lab3EmpTmp{
+public class EmpTmp{
     
         protected String name;
         protected int salary;
         protected int experience;
     
-    public Lab3EmpTmp(String n,int exp,int sal){
+    public EmpTmp(String n,int exp,int sal){
         name = n;
         salary = sal;
         experience =exp;
     }
-    public Lab3EmpTmp(String n){
+    public EmpTmp(String n){
         this.name = n;
     }
-    public Lab3EmpTmp(){
+    public EmpTmp(){
 
     }
     public void setName(String name){

@@ -25,7 +25,8 @@ public class Lab1Driver {
     }
     static void q3() {
         keng = new Lab1Coder("Keng",2);
-keng.setLanguages ("java", "solidity", "c"); Lab1Coder ber3 = new Lab1Coder ("ber3");
+keng.setLanguages ("java", "solidity", "c"); 
+Lab1Coder ber3 = new Lab1Coder ("ber3");
 ber3.setLanguages ("c", "java", "typescript"); System.out.println(ber3);
 ArrayList<String> commonLanguages=ber3.findCommonLanguage(somsri);
 System.out.println(commonLanguages);

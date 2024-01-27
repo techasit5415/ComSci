@@ -17,9 +17,6 @@ public class Lab3 {
 
         System.out.println("Upcasting");
         for (EmpTmp e : aList)
-
-
-
             e.sayHi();
         System.out.println("Downcasting");
         for (EmpTmp e : aList) {
