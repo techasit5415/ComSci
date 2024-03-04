@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 
 class FindWay {
     String[] vertex;
@@ -56,29 +57,77 @@ class FindWay {
     }
 
     public void checkRpEdge(int idx) {
-        for (int i = 0; i < idx; i++) {
-            if (graphs[idx][1].equals(graphs[i][1])) {
+        HashSet<String> visitedEdges = new HashSet<>();
+        
+        for (int i = 1; i <= way.length-2; i += 2) {
+            String currentEdge = way[i] + way[i+1];
+            if (visitedEdges.contains(currentEdge)) {
                 rpEdge = true;
                 return;
+            } else {
+                visitedEdges.add(currentEdge);
             }
         }
         rpEdge = false;
     }
     
+      
+      
     
-    
-
 
     public void checkRpVertex(int idx) {
         if (way.length >= 2) {
-            if (way[0].equals(way[way.length - 1])) {
-                rpVertex = false; 
-                sameSEFL = true;
-            } else if (!rpVertex) {
-                rpVertex = true; 
-            }
-        }
+            
+              if (!rpVertex) {
+                //rpVertex = true; 
+                if (way[0].equals(way[way.length - 1])&& rpEdge==false) {
+                    // rpVertex = false; 
+                    sameSEFL = true;
+
+
+                    String firstNode = way[0];
+                    boolean allNodesEqual = true;
+                    for (int i = 1; i < way.length; i++) {
+                                    // If any node is not equal to the first node, then it's not a repeated vertex
+                                    if (!way[i].equals(firstNode)) {
+                                        allNodesEqual = false;
+                                        break; // Exit the loop since we found a non-repeated vertex
+                                    }
+                                }
+                        
+                                // If all nodes are equal to the first node, set rpVertex to false
+                                if (allNodesEqual) {
+                                    rpVertex = false;
+        }}}}
     }
+
+
+    // public void checkRpVertex(int idx) {
+    //     if (way.length >= 2) {
+    //         boolean allNodesEqual = true;
+    //         String firstNode = way[0];
+    
+    //         // Loop through all nodes in the way (except the first one)
+    //         for (int i = 1; i < way.length; i++) {
+    //             // If any node is not equal to the first node, then it's not a repeated vertex
+    //             if (!way[i].equals(firstNode)) {
+    //                 allNodesEqual = false;
+    //                 break; // Exit the loop since we found a non-repeated vertex
+    //             }
+    //         }
+    
+    //         // If all nodes are equal to the first node, set rpVertex to false
+    //         if (allNodesEqual) {
+    //             rpVertex = false; // Set rpVertex to false since all nodes are the same
+    //             sameSE = true; // Set sameSE to true since the path is a cycle
+    //         }
+    //     }
+    // }
+    
+
+
+    
+
 
     public void checkSE() {
         if (way[0].equals(way[way.length - 1])) {
