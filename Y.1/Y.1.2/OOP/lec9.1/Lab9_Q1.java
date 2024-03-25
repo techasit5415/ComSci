@@ -4,8 +4,8 @@ import java.util.List;
 public class Lab9_Q1 {
     public static void main(String[] args) {
         //ex1();
-        //ex2();
-        //ex3();
+        // ex2();
+        ex3();
         //ex4();
         //ex5();
     }
