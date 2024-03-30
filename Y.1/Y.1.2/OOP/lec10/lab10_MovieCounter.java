@@ -32,8 +32,8 @@ public class lab10_MovieCounter {
         // lab10MC.q7();
         // lab10MC.q8();
         // lab10MC.q9();
-        // lab10MC.q10();
-        lab10MC.q11();
+        lab10MC.q10();
+        // lab10MC.q11();
         
     }
 

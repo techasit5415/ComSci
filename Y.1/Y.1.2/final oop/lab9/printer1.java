@@ -10,4 +10,7 @@ public class printer1  {
     public void example3(List<?> mylist){
     System.out.println(mylist);
     } 
+
+
+
 }

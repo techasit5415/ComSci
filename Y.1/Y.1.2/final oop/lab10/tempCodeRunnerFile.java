@@ -1,1 +1,1 @@
-lab10.example2();
+filter(n->n%2==1);
