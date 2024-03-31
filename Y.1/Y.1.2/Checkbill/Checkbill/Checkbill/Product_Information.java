@@ -1,6 +1,6 @@
 package Checkbill;
 
-import java.awt.EventQueue;
+// import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JTextField;
@@ -321,7 +321,7 @@ public class Product_Information extends Personal_Information   {
 	     btnNewButton_1.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
         	 Personal_Information window = new Personal_Information();
-        	 DefaultTableModel model = (DefaultTableModel) table.getModel();
+        	//  DefaultTableModel model = (DefaultTableModel) table.getModel();
         	 window.frame.setVisible(true);
 			 frame.setVisible(false);
 		}

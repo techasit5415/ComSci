@@ -1,6 +1,6 @@
 package Checkbill;
 
-import java.awt.EventQueue;
+// import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -10,9 +10,9 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
 import java.awt.Color;
-import javax.swing.JCheckBox;
-import javax.swing.JRadioButton;
-import java.util.ArrayList;
+// import javax.swing.JCheckBox;
+// import javax.swing.JRadioButton;
+// import java.util.ArrayList;
 
 //คลาสข้อมูลส่วนตัว
 public class Personal_Information extends keepall  {

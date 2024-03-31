@@ -1,7 +1,7 @@
 package Checkbill;
 
-import java.awt.EventQueue;
-import java.util.Map;
+// import java.awt.EventQueue;
+// import java.util.Map;
 import javax.swing.JFrame;
 import javax.swing.JButton;
 import java.awt.Font;
@@ -9,13 +9,13 @@ import javax.swing.JLabel;
 import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.JTextField;
+// import javax.swing.JTextField;
 
 //คลาสบิลใบเสร็จ
 public class Bill_of_receipt extends Personal_Information {
 
 	JFrame frame;
-	private String Name;
+	// private String Name;
 	
 
 	/**
