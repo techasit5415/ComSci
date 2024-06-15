@@ -98,19 +98,22 @@ public class Personal_Information extends keepall  {
 		NameText.setBounds(240, 29, 120, 31);
 		frame.getContentPane().add(NameText);
 		NameText.setColumns(10);
-		
+		String inputText = NameText.getText();
+		setName(inputText);
 		AddressText = new JTextField();
 		AddressText.setBackground(new Color(255, 230, 255));
 		AddressText.setBounds(240, 87, 212, 31);
 		frame.getContentPane().add(AddressText);
 		AddressText.setColumns(10);
-		
+		String inputadd = NameText.getText();
+		setAddress(inputadd);
 		PNBText = new JTextField();
 		PNBText.setBackground(new Color(255, 230, 255));
 		PNBText.setBounds(240, 147, 144, 31);
 		frame.getContentPane().add(PNBText);
 		PNBText.setColumns(10);
-		
+		String inputtel = NameText.getText();
+		setTel(inputtel);
 		//ปุ่ม Back ไปยังหน้า.......
 		JButton btnNewButton = new JButton("BACK");
 		btnNewButton.setForeground(new Color(255, 255, 255));
@@ -141,7 +144,7 @@ public class Personal_Information extends keepall  {
 				Bill_of_receipt window = new Bill_of_receipt();
 				window.frame.setVisible(true);
 				frame.setVisible(false);
-				printNames();
+				// printNames();
 			
 			}
 		});

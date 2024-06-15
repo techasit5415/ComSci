@@ -82,15 +82,17 @@ public class Bill_of_receipt extends Personal_Information {
 		lblNewLabel_1.setFont(new Font("TH Krub", Font.BOLD, 18));
 		lblNewLabel_1.setBounds(10, 104, 321, 14);
 		frame.getContentPane().add(lblNewLabel_1);
-		
+	
+
 		JLabel lblNewLabel_2 = new JLabel("รายการสินค้า");
 		lblNewLabel_2.setFont(new Font("TH Krub", Font.BOLD, 20));
 		lblNewLabel_2.setBounds(10, 117, 87, 21);
 		frame.getContentPane().add(lblNewLabel_2);
 		
-
+	// keep
 		keepall k1 = new keepall();
         k1.printNamesOnGUI(frame);
+		k1.printdataperson(frame);
 
 		JLabel lblNewLabel_3 = new JLabel("รวมการสั่งซื้อ :");
 		lblNewLabel_3.setFont(new Font("TH Krub", Font.BOLD, 20));
