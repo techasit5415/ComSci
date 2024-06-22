@@ -1,6 +1,5 @@
 public class test {
-    Shape sp = new Shape();
-}
-class Shape{
-    System.out.println("From shape");
-}
+    public static void main(String[] args){
+        System.out.println("Hello World");
+    }
+ }
